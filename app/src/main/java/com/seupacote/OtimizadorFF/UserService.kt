@@ -4,8 +4,6 @@ import android.os.Process
 
 class UserService : IUserService.Stub() {
 
-    constructor()
-
     override fun execCommand(command: String): String {
         return try {
             val process = ProcessBuilder("sh", "-c", command)
